@@ -442,89 +442,165 @@ blockquote { font: 400 33px/1.5 var(--serif); margin: 34px 0; }
     font-size: 14px;
   }
 
+  .menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #fff;
+    flex-direction: column;
+    gap: 0;
+    padding: 12px 24px 24px;
+    border-top: 1px solid var(--line);
+    box-shadow: 0 16px 30px #0002;
+  }
 
-  .menu { display: none; position: absolute; top: 100%; left: 0; right: 0; background: #fff; flex-direction: column; gap: 0; padding: 12px 24px 24px; border-top: 1px solid var(--line); box-shadow: 0 16px 30px #0002; }
+  .menu.is-open {
+    display: flex;
+  }
 
-  .menu.is-open { display: flex; }
+  .menu__drop {
+    display: none;
+  }
 
-  .menu__drop { display: none; }
+  .navbar__actions .split-btn {
+    display: none;
+  }
 
-  .navbar__actions .split-btn 
+  .topbar ul {
+    display: none;
+  }
 
-  .topbar ul { display: none; }
+  .hero__photo {
+    inset: 40% 0 0 0;
+    background: linear-gradient(180deg, var(--cream) 0%, transparent 30%),
+      url(/images/hero.jpg) center/cover,
+      linear-gradient(135deg, #b9a99a, #6b5a4c);
+  }
 
-  .hero__photo { inset: 40% 0 0 0; background: linear-gradient(180deg, var(--cream) 0%, transparent 30%), url(/images/hero.jpg) center/cover, linear-gradient(135deg,#b9a99a,#6b5a4c); }
+  .hero__inner {
+    padding: 70px 19px 320px;
+  }
 
-  .hero__inner { padding: 70px 19px 320px; }
+  .hero p {
+    font-size: 18px;
+  }
 
-  .hero p { font-size: 18px; }
+  .about {
+    grid-template-columns: 1fr;
+  }
 
-  .about { grid-template-columns: 1fr; }
+  .about__photo {
+    min-height: 380px;
+  }
 
-  .about__photo { min-height: 380px; }
+  .split-head {
+    flex-direction: column;
+    gap: 20px;
+  }
 
-  .split-head { flex-direction: column; gap: 20px; }
+  .events__hero {
+    height: 560px;
+  }
 
-  .events__hero { height: 560px; }
+  .events__card {
+    width: calc(100% - 32px);
+    margin: 0 16px;
+  }
 
-  .events__card { width: calc(100% - 32px); margin: 0 16px; }
+  .events__text h3 {
+    font-size: 28px;
+  }
 
-  .events__text h3 { font-size: 28px; }
+  .events__thumbs {
+    display: none;
+  }
 
-  .events__thumbs { display: none; }
+  .cards3 {
+    grid-template-columns: 1fr;
+  }
 
-  .cards3 { grid-template-columns: 1fr; }
+  .init {
+    flex-basis: 85%;
+  }
 
-  .init { flex-basis: 85%; }
+  .testi {
+    grid-template-columns: 1fr;
+  }
 
-  .testi { grid-template-columns: 1fr; }
+  .testi__img {
+    min-height: 320px;
+  }
 
-  .testi__img { min-height: 320px; }
+  blockquote {
+    font-size: 24px;
+  }
 
-  blockquote { font-size: 24px; }
+  .footer__top {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 
-  .footer__top { flex-direction: column; align-items: flex-start; }
+  .footer__grid {
+    grid-template-columns: 1fr;
+    padding-bottom: 60px;
+  }
 
-  .footer__grid { grid-template-columns: 1fr; padding-bottom: 60px; }
-
-  .footer__bottom { flex-direction: column; gap: 16px; }
-
+  .footer__bottom {
+    flex-direction: column;
+    gap: 16px;
+  }
 }
 
 @media (max-width: 560px) {
+  .container {
+    width: calc(100% - 32px);
+  }
 
-  .container { width: calc(100% - 32px); }
+  .section {
+    padding-block: 64px;
+  }
 
-  .section { padding-block: 64px; }
+  .logo__text strong {
+    font-size: 22px;
+  }
 
-  .logo__text strong { font-size: 22px; }
-
-  .round-btn { width: 52px; height: 52px; }
-
+  .round-btn {
+    width: 52px;
+    height: 52px;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
 
-  html { scroll-behavior: auto; }
-
-  * { transition: none !important; }
-
+  * {
+    transition: none !important;
+  }
 }
 
-
-
 @media (max-width: 980px) {
+  .strip {
+    height: auto;
+    grid-template-columns: 1fr 1fr;
+    margin-top: -60px;
+  }
 
-  .strip { height: auto; grid-template-columns: 1fr 1fr; margin-top: -60px; }
-
-  .strip__cell, .strip__cell.is-active { margin-top: 0; padding: 40px 28px; }
-
+  .strip__cell,
+  .strip__cell.is-active {
+    margin-top: 0;
+    padding: 40px 28px;
+  }
 }
 
 @media (max-width: 560px) {
-
-  .strip { grid-template-columns: 1fr; margin: -40px 0 0; }
-
+  .strip {
+    grid-template-columns: 1fr;
+    margin: -40px 0 0;
+  }
 }
 
 

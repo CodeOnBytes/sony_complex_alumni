@@ -100,7 +100,7 @@ export default function Header() {
         </nav>
 
         <div className="navbar__actions">
-          <button
+          {/* <button
             className="icon-btn"
             aria-label="Search"
             type="button"
@@ -117,7 +117,7 @@ export default function Header() {
               <circle cx="11" cy="11" r="7" />
               <path d="M20 20l-4-4" />
             </svg>
-          </button>
+          </button> */}
 
           <button
             className="icon-btn burger"
