@@ -87,10 +87,10 @@ export default function Header() {
               {item.children && (
                 <ul className="menu__drop">
                   {item.children.map((child) => (
-                    <li key={child}>
-                      <a href="#">
-                        {child}
-                      </a>
+                    <li key={child.to}>
+                      <NavLink to={child.to}>
+                        {child.label}
+                      </NavLink>
                     </li>
                   ))}
                 </ul>

@@ -11,6 +11,7 @@ import {
   Photo,
   SplitButton,
 } from "../ui";
+import { Link } from "react-router-dom";
 
 const icons: Record<string, ReactNode> = {
   people: <PeopleIcon />,
@@ -48,9 +49,9 @@ export default function WhyJoin() {
             ))}
           </ul>
 
-          <SplitButton onClick={() => navigate("/enroll")}>
-            {whyJoin.cta}
-          </SplitButton>
+        <Link to="/enroll" className="why__enroll-link">
+          <SplitButton>{whyJoin.cta}</SplitButton>
+        </Link>
         </div>
       </div>
 
