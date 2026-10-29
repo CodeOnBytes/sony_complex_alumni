@@ -47,8 +47,11 @@ export default function Hero() {
             <h3>{f.title}</h3>
             <p>{f.text}</p>
             {i === active && (
-              <a href={f.href} className="strip__cta"><span>{f.cta}</span><ArrowRight /></a>
-            )}
+            <Link to={f.href} className="strip__cta">
+              <span>{f.cta}</span>
+              <ArrowRight />
+            </Link>           
+           )}
           </article>
         ))}
       </div>
